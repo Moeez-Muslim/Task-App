@@ -18,6 +18,9 @@ app.use(cors({
 app.use(express.json());
 app.use(cookieParser());
 
+app.get('/', (req, res) => {
+  res.send('<h1>Task App API v1.0</h1>');
+});
 app.use('/auth', authRoutes);
 app.use('/tasks', requireAuth, taskRoutes);
 
