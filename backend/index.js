@@ -11,7 +11,8 @@ const app = express();
 
 // ✅ Enable CORS for frontend (adjust origin as needed)
 app.use(cors({
-  origin: 'http://localhost:5173', // <-- Your frontend URL (Vite default)
+  //origin: 'http://localhost:5173', // <-- Your frontend URL (Vite default)
+  origin: "*",
   credentials: true
 }));
 
